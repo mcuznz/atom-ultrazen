@@ -1,0 +1,30 @@
+/* Ultrazen - @mcuznz */
+
+/* This is /actually/ unnecessary, because Width can be set from within Zen's config */
+[data-zen="true"] atom-text-editor.editor {
+    width: 100vw !important;
+}
+
+/* Hide all distractions - editor panes, top and bottom panels, resize handles... */
+[data-zen="true"] atom-pane.pane,
+[data-zen="true"] atom-panel-container.bottom,
+[data-zen="true"] atom-panel-container.top,
+[data-zen="true"] atom-pane-resize-handle {
+    display: none;
+}
+
+/* ... except the single editor that has focus, of course! */
+[data-zen="true"] atom-pane.pane.active {
+    display: flex;
+}
+
+/* I still like seeing Line Numbers in Zen, but I've moved them away from the code
+   and faded them out to be less distracting, with improved visibility on Hover */
+[data-zen="true"] ::shadow .gutter {
+    display: block;
+    width: 10vw;
+    opacity: 0.4;
+}
+[data-zen="true"] ::shadow .gutter:hover {
+    opacity: 0.8;
+}

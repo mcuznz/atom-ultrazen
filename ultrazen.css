@@ -6,9 +6,12 @@
 }
 
 /* Hide all distractions - editor panes, top and bottom panels, resize handles... */
-[data-zen="true"] atom-pane.pane,
+
+/* Recently commented these out as it prevented the Find dialog from appearing... oops!
 [data-zen="true"] atom-panel-container.bottom,
 [data-zen="true"] atom-panel-container.top,
+*/
+[data-zen="true"] atom-pane.pane,
 [data-zen="true"] atom-pane-resize-handle {
     display: none;
 }
